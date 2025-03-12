@@ -53,6 +53,64 @@ html, body {
   width: 100vw;
 }
 
+.apartment-container {  
+  margin: 30px 0px 0px 10px;
+  display: flex;
+  flex-wrap: wrap; /* Wraps to next line when reaching 100% width */
+  justify-content: space-around;
+  font-family: 'Roboto', sans-serif;
+  max-width: 100vw;
+}
+
+.apartment-card {
+  display: flex;
+  flex-direction: column; /* Ensures children (text + button) are stacked */
+  justify-content: space-between; /* Ensures spacing within card */
+  align-items: center;
+  border: 2px solid rgb(215, 213, 213);
+  border-radius: 20px;
+  margin: 5px;
+  height: 400px;
+  width: 30%; /* Adjust width for better fit */
+  min-width: 300px; /* Ensures responsiveness */
+  padding: 10px;
+  margin-top:30px;
+  box-sizing: border-box; /* Ensures padding does not affect size */
+  box-shadow: 0px 8px 15px rgb(134, 132, 132);
+}
+
+.apartment-card a{
+  font-family: 'Roboto', sans-serif;
+  color: black;
+  text-decoration: none;
+}
+.apartment-card button {
+  width: 70px;
+  height: 30px;
+  border: 0;
+  border-radius: 10px;
+  background-color: rgb(216, 212, 212);
+  margin-top: auto; /* Pushes button to the bottom */
+  align-self: center; /* Centers the button horizontally */
+}
+
+.apartment-card img{
+  width: 90%;
+  height: 60%;
+  margin: 15px 0;
+}
+
+#score-img{
+  width:20px;
+  height: auto;
+  margin:0;
+}
+
+h6{
+  margin:0;
+  padding: 0;
+}
+
 /* Footer always at the bottom */
 footer {
   position: fixed;
