@@ -1,26 +1,24 @@
+import {useState} from 'react';
 import './App.css'
-import logo from "./assets/zylo-logo.png"
 import {ApartmentList} from './components/ApartmentList.jsx'
+import NotFound from './components/NotFound.jsx';
+import Footer  from './components/Footer.jsx';
+import NavBar from './components/NavBar.jsx';
+import { Route, Routes } from 'react-router-dom';
+import AboutPage from './components/AboutPage.jsx';
+import apartmentListData from './assets/listings.json';
 function App() {
+  const [apartmentsState, setApartmentsState] = useState(apartmentListData);
   return (
     <>
-    <div className="app">    
-    <div className='navbar'>   
-      <img id ="logo" src={logo}/>
-      <nav>
-        <div className='sidebar'> 
-          <a href="#">Home</a>
-          <a href="#">About Us</a>
-        </div>
-      </nav>
-    </div>  
-        <div className="displayApartment">
-          <ApartmentList/>
-       </div>
-      <footer> <a href=" https://github.com/Leinyem/Proyect-React---Apartments"> Zylo - Apartament Management </a> 
-      </footer>
-    </div>
+      <NavBar />
+      <Routes>
+        <Route path="/apartmentDetails" element={<ApartmentList apartmentsArray={apartmentsState} />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+      <Footer />
     </>
   );
-} 
-export default App
+}
+export default App;

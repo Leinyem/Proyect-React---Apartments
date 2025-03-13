@@ -112,7 +112,7 @@ h6{
 }
 
 /* Footer always at the bottom */
-footer {
+.footer {
   position: fixed;
   display: flex; /* Enables flexbox */
   align-items: center; /* Centers vertically */
@@ -127,7 +127,7 @@ footer {
   box-shadow: 0px -2px 9px rgb(134, 132, 132);
 }
 
-footer a{
+.footer a{
   text-decoration: none; 
   color: whitesmoke;
   font-size: 25px;
