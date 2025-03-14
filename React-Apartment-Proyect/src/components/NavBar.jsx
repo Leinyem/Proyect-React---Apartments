@@ -1,5 +1,6 @@
 import React from 'react'
-import logo from "../assets/zylo-logo1.png"
+import logo from "../assets/zylo5.png"
+import { Link } from 'react-router-dom'
 const NavBar = () => {
   return (
     <div className="app">    
@@ -7,8 +8,12 @@ const NavBar = () => {
             <img id ="logo" src={logo}/>
             <nav>
              <div className='sidebar'> 
-                <a href="#">Home</a>
-                <a href="#">About Us</a>
+              <Link to="/">
+               Home
+              </Link>
+              <Link to="/AboutPage">
+                About Us
+                </Link>
             </div>
             </nav>
         </div> 

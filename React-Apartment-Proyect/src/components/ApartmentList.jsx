@@ -1,7 +1,4 @@
 import React, { useState } from 'react'
-import '../App.css'
-
-import { Link } from 'react-router-dom';
 import ApartmentCard from './ApartmentCard';
 export const ApartmentList = ({apartmentsArray, setApartmentsArray}) => {
     function handleDelete(theApartmentId) {
