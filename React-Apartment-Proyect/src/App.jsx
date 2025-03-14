@@ -7,13 +7,15 @@ import NavBar from './components/NavBar.jsx';
 import { Route, Routes } from 'react-router-dom';
 import AboutPage from './components/AboutPage.jsx';
 import apartmentListData from './assets/listings.json';
+import ApartmentDetail from './components/ApartmentDetail.jsx';
 function App() {
-  const [apartmentsState, setApartmentsState] = useState(apartmentListData);
+  const [apartmentsState, setApartmentsState] = useState(apartmentListData.results);
   return (
     <>
       <NavBar />
       <Routes>
-        <Route path="/apartmentDetails" element={<ApartmentList apartmentsArray={apartmentsState} />} />
+        <Route path="/" element={<ApartmentList apartmentsArray={apartmentsState} setApartmentsArray={setApartmentsState}/>}/>
+        <Route path="/apartmentDetail/:apartmentId" element={<ApartmentDetail />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

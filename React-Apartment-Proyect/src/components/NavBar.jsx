@@ -1,6 +1,5 @@
 import React from 'react'
-import '../App.css'
-import logo from "../assets/zylo-logo.png"
+import logo from "../assets/zylo-logo1.png"
 const NavBar = () => {
   return (
     <div className="app">    

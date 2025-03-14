@@ -48,13 +48,8 @@ html, body {
   margin-top: 30px;
 }
 
-.main-container{
-  height: 75vh;
-  width: 100vw;
-}
-
 .apartment-container {  
-  margin: 30px 0px 0px 10px;
+  margin: 20px 0px 0px 10px;
   display: flex;
   flex-wrap: wrap; /* Wraps to next line when reaching 100% width */
   justify-content: space-around;
@@ -72,7 +67,7 @@ html, body {
   margin: 5px;
   height: 400px;
   width: 30%; /* Adjust width for better fit */
-  min-width: 300px; /* Ensures responsiveness */
+  min-width: 400px; /* Ensures responsiveness */
   padding: 10px;
   margin-top:30px;
   box-sizing: border-box; /* Ensures padding does not affect size */
@@ -84,6 +79,14 @@ html, body {
   color: black;
   text-decoration: none;
 }
+
+.btn-card{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
 .apartment-card button {
   width: 70px;
   height: 30px;
@@ -123,6 +126,7 @@ h6{
   color: whitesmoke;
   text-align: center; 
   padding: 0;
+  margin:0;
   background-color:  rgb(215, 213, 213);
   box-shadow: 0px -2px 9px rgb(134, 132, 132);
 }
@@ -131,5 +135,5 @@ h6{
   text-decoration: none; 
   color: whitesmoke;
   font-size: 25px;
-
+margin: 0;
 }
