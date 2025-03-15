@@ -9,15 +9,19 @@ import AboutPage from './components/AboutPage.jsx';
 import apartmentListData from './assets/listings.json';
 import CreateNewApartment from './components/CreateNewApartment.jsx';
 import ApartmentDetail from './components/ApartmentDetail.jsx';
+
+
 function App() {
+
   const [apartmentsState, setApartmentsState] = useState(apartmentListData.results);
+   
   return (
     <>
       <NavBar />
       <Routes>
         <Route path="/" element={<ApartmentList apartmentsArray={apartmentsState} setApartmentsArray={setApartmentsState}/>}/>
         <Route path="/apartmentDetail/:apartmentId" element={<ApartmentDetail />} />
-        <Route path="/about" element={<AboutPage />} />
+        <Route path="/AboutPage" element={<AboutPage />} />
         <Route path="/form" element={<CreateNewApartment setApartmentsState={setApartmentsState} apartmentsState={apartmentsState}/>} />
         <Route path="*" element={<NotFound />} />
       </Routes>

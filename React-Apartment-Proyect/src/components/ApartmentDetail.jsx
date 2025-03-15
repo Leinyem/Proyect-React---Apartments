@@ -18,7 +18,8 @@ function ApartmentDetail() {
     <p>{apartmentProfile.neighborhood_overview}</p>
     <p>{apartmentProfile.description}</p>
     <h4>Room Type: {apartmentProfile.room_type}</h4>
-   
+    <h4>Accommodates: {apartmentProfile.accommodates}</h4>
+    <h4>Bathrooms: {apartmentProfile.bathrooms}</h4>
     {/* Amenities Section */}
     <div className='amenities-container'>
         <h3 className='amenities-title'>Amenities</h3>

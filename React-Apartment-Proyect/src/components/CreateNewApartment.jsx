@@ -6,12 +6,12 @@ const CreateNewApartment = (props) => {
   const [picture_url, setPicture] = useState("");
   const [neighbourhood, setNeighborhood] = useState("");
   const [price, setPrice] = useState("");
-  const [neighborhood_overview, setNeigborhoodOverview] = useState("");
+  const [neighborhood_overview, setNeighborhoodOverview] = useState("");
   const [description, setDescription] = useState("");
   const [room_type, setRoomType] = useState("");
-
-  //ability to navigate in js
+ //ability to navigate in js
   const nav = useNavigate();
+
   function handleCreateApartment(event) {
     //always with a form, prevent the page from reloading first
     event.preventDefault();
@@ -26,7 +26,7 @@ const CreateNewApartment = (props) => {
       description,
       room_type,
     };
-    props.setPetsState([newApartToAdd, ...props.petsState]);
+    props.setApartmentsState([newApartToAdd, ...props.apartmentsState]);
     nav("/");
   }
   return (
@@ -102,6 +102,10 @@ const CreateNewApartment = (props) => {
           onChange={(e) => setRoomType(e.target.value)}
         />
       </div>
+      
+     
+      
+
 
       <button className="submit-btn">Create</button>
     </form>
