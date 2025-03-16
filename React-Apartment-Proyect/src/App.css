@@ -5,15 +5,16 @@ html, body {
   display: flex;
   flex-direction: column;
   font-family: 'Roboto', sans-serif;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 /* Navbar styles */
 .navbar {
   font-family: 'Roboto', sans-serif;
   width: 100vw;
-  height: 15vh; /* Adjust as needed */
-  background-color: rgba(178, 178, 178, 0.125);
-  box-shadow: 0px 8px 15px rgb(134, 132, 132);
+  height: 20vh; /* Adjust as needed */
+  background-color: rgb(245, 245, 245);
+  box-shadow: 0px 8px 15px rgba(53, 250, 4, 0.74);
   display: flex; /* Use flexbox */
   align-items:center; /* Vertically center items */
   justify-content: space-between; /* Sidebar on left, logo centered */
@@ -22,11 +23,12 @@ html, body {
 
 /* Center the logo */
 .navbar img {
-  height: 90%; /* Adjust height based on navbar */
-  width: 300px;
+  height: 100%; /* Adjust height based on navbar */
+  width: 150px;
   position: absolute;
   left: 50%;
-  transform: translateX(-50%); /* Center the image */
+  transform: translateX(-50%) ;/* Center the image */
+  border: none;
 }
 
 /* Sidebar aligned to the left */
@@ -34,20 +36,29 @@ html, body {
   display: flex;
   justify-content: flex-start; 
   flex-direction: row; 
-  gap: 20px;
+  gap: 80px;
   margin-right: auto; /* Push everything else to the right */
   align-items: flex-start; /* Align items to the top by default */
   margin-top: 10%;
   margin-bottom: 100px;
   margin-left:25px;
+  
+}
+.sidebar a {
+  color: rgba(0, 0, 0, 0.9);
+  text-decoration: none;
+  padding: 0;          
+  border: none;        
+  box-shadow: none;    
+  display: inline-block;
+  transition: box-shadow 0.3s ease, outline 0.3s ease; 
 }
 
-.sidebar a {
-  color: #979797;
-  text-decoration: none;
-  list-style: none; /* Remove any list styles */
-  margin-top: 30px;
+.sidebar a:hover {
+  outline: none;
+  box-shadow: 0 4px 8px rgba(6, 196, 15, 0.93); 
 }
+
 
 .apartment-container {  
   margin: 20px 0px 0px 10px;
@@ -63,8 +74,8 @@ html, body {
   flex-direction: column; /* Ensures children (text + button) are stacked */
   justify-content: space-between; /* Ensures spacing within card */
   align-items: center;
-  border: 2px solid rgb(215, 213, 213);
-  border-radius: 20px;
+  border: 2px solid rgba(126, 250, 11, 0.97);
+  border-radius: 60px;
   margin: 5px;
   height: 400px;
   width: 30%; /* Adjust width for better fit */
@@ -72,7 +83,7 @@ html, body {
   padding: 10px;
   margin-top:30px;
   box-sizing: border-box; /* Ensures padding does not affect size */
-  box-shadow: 0px 8px 15px rgb(134, 132, 132);
+  background-color: rgb(221, 221, 220);
 }
 
 .apartment-card a{
@@ -84,12 +95,13 @@ html, body {
 .btn-card{
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
+
 .apartment-card button {
-  width: 70px;
+  width: 50px;
   height: 30px;
   border: 0;
   border-radius: 10px;
@@ -308,4 +320,42 @@ textarea {
   font-size: 25px;
 margin: 0;
 }
+
+.about-container {
+  display: flex;
+  justify-content: center;
+  gap: 100px; 
+  padding: 20px;
+  text-align: center;
+}
+
+.about-profile-card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-profile-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.about-email-link {
+  display: block;
+  margin-top: 10px;
+  color: blue;
+  text-decoration: none;
+  font-weight: lighter;
+  font-style: italic;
+
+}
+
+.about-email-link:hover {
+  text-decoration: underline;
+}
+
 
