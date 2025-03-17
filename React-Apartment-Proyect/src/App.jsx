@@ -20,7 +20,7 @@ function App() {
       <NavBar />
       <Routes>
         <Route path="/" element={<ApartmentList apartmentsArray={apartmentsState} setApartmentsArray={setApartmentsState}/>}/>
-        <Route path="/apartmentDetail/:apartmentId" element={<ApartmentDetail />} />
+        <Route path="/ApartmentDetail/:apartmentId" element={<ApartmentDetail apartmentsState={apartmentsState} />} />
         <Route path="/AboutPage" element={<AboutPage />} />
         <Route path="/form" element={<CreateNewApartment setApartmentsState={setApartmentsState} apartmentsState={apartmentsState}/>} />
         <Route path="*" element={<NotFound />} />

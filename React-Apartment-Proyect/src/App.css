@@ -24,7 +24,7 @@ html, body {
 /* Center the logo */
 .navbar img {
   height: 100%; /* Adjust height based on navbar */
-  width: 150px;
+  width: 200px;
   position: absolute;
   left: 50%;
   transform: translateX(-50%) ;/* Center the image */

@@ -33,7 +33,7 @@ const ApartmentCard = ({
 
         </button>
 
-        <Link to={`/ApartmentDetail/${id}`}>
+        <Link to={`/apartmentDetail/${id}`}>
 
           <button>Details</button>
 
