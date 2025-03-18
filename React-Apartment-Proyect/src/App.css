@@ -14,7 +14,7 @@ html, body {
   width: 100vw;
   height: 20vh; /* Adjust as needed */
   background-color: rgb(245, 245, 245);
-  box-shadow: 0px 8px 15px rgba(53, 250, 4, 0.74);
+  text-shadow: 0px 15px 15px rgba(53, 250, 4, 0.74);
   display: flex; /* Use flexbox */
   align-items:center; /* Vertically center items */
   justify-content: space-between; /* Sidebar on left, logo centered */

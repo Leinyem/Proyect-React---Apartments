@@ -1,13 +1,23 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
 
-function ApartmentDetail({ apartmentsState }) {  // Recibir los apartamentos como prop
+function ApartmentDetail({ apartmentsState }) { 
+
+   // Take apartments as PROPS
   const { apartmentId } = useParams();
 
+
+  console.log('Apartment Id from URL:', apartmentId); 
+  console.log('Apartments in state:', apartmentsState)
+
+
+
+
   // Buscar en apartmentsState, NO en el JSON
-  const apartmentProfile = apartmentsState.find((apt) => apt.id === apartmentId);
+  const apartmentProfile = apartmentsState.find((apt) => String(apt.id) === String(apartmentId));
 
   if (!apartmentProfile) {
+
     return <div>Apartment not found</div>;
   }
 
@@ -24,7 +34,13 @@ function ApartmentDetail({ apartmentsState }) {  // Recibir los apartamentos com
       <h4>Room Type: {apartmentProfile.room_type}</h4>
 
       <Link to="/">
-        <button className="back-btn">Back to Home</button>
+
+        <button className="back-btn" onClick={() => window.scrollTo(0,0)}>
+     
+          Back to Home
+        
+        </button>
+
       </Link>
     </div>
   );

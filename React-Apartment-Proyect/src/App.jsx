@@ -14,13 +14,13 @@ import ApartmentDetail from './components/ApartmentDetail.jsx';
 function App() {
 
   const [apartmentsState, setApartmentsState] = useState(apartmentListData.results);
-   
+   console.log("apartment state:",apartmentsState.length)
   return (
     <>
       <NavBar />
       <Routes>
         <Route path="/" element={<ApartmentList apartmentsArray={apartmentsState} setApartmentsArray={setApartmentsState}/>}/>
-        <Route path="/ApartmentDetail/:apartmentId" element={<ApartmentDetail apartmentsState={apartmentsState} />} />
+        <Route path="/ApartmentDetail/:apartmentId" element={<ApartmentDetail apartmentsState={apartmentsState} />} /> //Important to ADD the States here too not just the element
         <Route path="/AboutPage" element={<AboutPage />} />
         <Route path="/form" element={<CreateNewApartment setApartmentsState={setApartmentsState} apartmentsState={apartmentsState}/>} />
         <Route path="*" element={<NotFound />} />

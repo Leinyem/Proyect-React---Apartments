@@ -40,6 +40,8 @@ const CreateNewApartment = (props) => {
       room_type,
     };
 
+    console.log("New Apartment ID:", newApartToAdd.id);
+
     props.setApartmentsState([newApartToAdd, ...props.apartmentsState]);
 
     window.scrollTo(0, 0);
