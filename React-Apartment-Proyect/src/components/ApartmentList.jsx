@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import ApartmentCard from './ApartmentCard';
 
 export const ApartmentList = ({apartmentsArray, setApartmentsArray}) => {
