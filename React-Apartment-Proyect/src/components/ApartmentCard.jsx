@@ -24,7 +24,7 @@ const ApartmentCard = ({
       <h6>{price?.includes("$") ? price : `$${price}`} night</h6>
       <h6>Minimum Nights: {minimum_nights}</h6>
 
-
+<div className="edition-btn">
       <div className="btn-card">
 
         <button onClick={() => { handleDelete(id); }}>
@@ -32,16 +32,14 @@ const ApartmentCard = ({
           <img src={bin} alt="Delete" />
 
         </button>
-
+        </div>
+     
         <Link to={`/ApartmentDetail/${id}`}>
-
           <button>Details</button>
-
         </Link>
         <Link to={`/EditPage/${id}`}>
           <button>Update</button>
         </Link>
-        
       </div>
     </div>
   );

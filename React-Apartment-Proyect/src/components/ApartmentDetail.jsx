@@ -33,17 +33,38 @@ function ApartmentDetail({ apartmentsState }) {
      
       <h4>Room Type: {apartmentProfile.room_type}</h4>
 
+ {/* Scores Section */}
+ <div className="scores-container">
+      <h3 className="scores-title">All Valuations</h3>
+      <div className="score-grid">
+        <div className="score-item">
+        <span className="score-label">Check-in</span>
+          <span className="score-value">{apartmentProfile?.review_scores_checkin} </span>
+        </div>
+        <div className="score-item">
+        <span className="score-label">Cleanliness</span>
+          <span className="score-value">{apartmentProfile?.review_scores_cleanliness}</span>
+        </div>
+        <div className="score-item">
+        <span className="score-label">Communication</span>
+          <span className="score-value">{apartmentProfile?.review_scores_checkin}</span>
+        </div>
+        <div className="score-item">
+        <span className="score-label">Location</span>
+          <span className="score-value">{apartmentProfile?.review_scores_location}</span>
+        </div>
+        <div className="score-item">
+        <span className="score-label">Accuracy</span>
+          <span className="score-value">{apartmentProfile?.review_scores_accuracy}</span>
+        </div>
+      </div>
+    </div>
       <Link to="/">
-
         <button className="back-btn" onClick={() => window.scrollTo(0,0)}>
-     
           Back to Home
-        
         </button>
-
       </Link>
     </div>
   );
 }
-
 export default ApartmentDetail;
