@@ -9,6 +9,7 @@ import AboutPage from './components/AboutPage.jsx';
 import apartmentListData from './assets/listings.json';
 import CreateNewApartment from './components/CreateNewApartment.jsx';
 import ApartmentDetail from './components/ApartmentDetail.jsx';
+import EditPage from './components/EditPage.jsx';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Route path="/AboutPage" element={<AboutPage />} />
         <Route path="/form" element={<CreateNewApartment setApartmentsState={setApartmentsState} apartmentsState={apartmentsState}/>} />
         <Route path="*" element={<NotFound />} />
+        <Route path="/editPage/:apartmentId" element={<EditPage setApartmentsState={setApartmentsState} apartmentsState={apartmentsState} />} />
       </Routes>
       <Footer />
     </>

@@ -21,7 +21,7 @@ const ApartmentCard = ({
 
       <h6>{name}</h6>
       <h6><img src={score} id="score-img" alt="score" /> {review_scores_rating} </h6>
-      <h6>{price} night</h6>
+      <h6>{price?.includes("$") ? price : `$${price}`} night</h6>
       <h6>Minimum Nights: {minimum_nights}</h6>
 
 
@@ -37,6 +37,9 @@ const ApartmentCard = ({
 
           <button>Details</button>
 
+        </Link>
+        <Link to={`/EditPage/${id}`}>
+          <button>Update</button>
         </Link>
         
       </div>

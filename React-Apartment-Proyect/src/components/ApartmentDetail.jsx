@@ -28,9 +28,9 @@ function ApartmentDetail({ apartmentsState }) {
         <img src={apartmentProfile.picture_url} alt={apartmentProfile.name} />
       </figure>
       <h3>{apartmentProfile.neighbourhood}</h3>
-      <p>{apartmentProfile.price} /night</p>
-      <p>{apartmentProfile.neighborhood_overview}</p>
-      <p>{apartmentProfile.description}</p>
+      <p>{apartmentProfile.price} p/night</p>
+      <p>{apartmentProfile.minimum_nights} nights</p>
+     
       <h4>Room Type: {apartmentProfile.room_type}</h4>
 
       <Link to="/">

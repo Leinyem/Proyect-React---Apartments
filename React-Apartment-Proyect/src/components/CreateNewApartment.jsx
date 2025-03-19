@@ -7,9 +7,9 @@ const CreateNewApartment = (props) => {
   const [picture_url, setPicture] = useState("");
   const [neighbourhood, setNeighborhood] = useState("");
   const [price, setPrice] = useState("");
-  const [neighborhood_overview, setNeighborhoodOverview] = useState("");
-  const [description, setDescription] = useState("");
+  const [minimum_nights, setMinimumNights] = useState("");
   const [room_type, setRoomType] = useState("");
+
 
   const nav = useNavigate();
 
@@ -21,8 +21,6 @@ const CreateNewApartment = (props) => {
       !picture_url ||
       !price ||
       !neighbourhood ||
-      !neighborhood_overview ||
-      !description ||
       !room_type
     ) {
       alert("Please fill in all fields!");
@@ -35,9 +33,8 @@ const CreateNewApartment = (props) => {
       picture_url,
       neighbourhood,
       price,
-      neighborhood_overview,
-      description,
       room_type,
+      minimum_nights,
     };
 
     console.log("New Apartment ID:", newApartToAdd.id);
@@ -104,24 +101,14 @@ const CreateNewApartment = (props) => {
         </div>
 
         <div className="input-group">
-          <label htmlFor="neighborhood_overview">Neighborhood Overview:</label>
+          <label htmlFor="">Minimum Nights:</label>
           <textarea
-            id="neighborhood_overview"
-            name="neighborhood_overview"
-            placeholder="Brief overview"
-            value={neighborhood_overview}
-            onChange={(e) => setNeighborhoodOverview(e.target.value)}
-          />
-        </div>
 
-        <div className="input-group">
-          <label htmlFor="description">Description:</label>
-          <textarea
-            id="description"
-            name="description"
-            placeholder="Description"
-            value={description}
-            onChange={(e) => setDescription(e.target.value)}
+            id="minNight"
+            name="minNight"
+            placeholder="minNight"
+            value={minimum_nights}
+            onChange={(e) => setMinimumNights(e.target.value)}
           />
         </div>
 
